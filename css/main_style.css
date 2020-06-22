@@ -1,0 +1,501 @@
+/* ----------------------Cabecera y estilos globales------------------------- */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.cabecera_principal{
+    width: 100%;
+}
+.caja_tres_color{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.caja{
+    height: 10px;
+}
+.caja.turqueza{
+    background-color: #02b8bf;
+}
+.caja.azul{
+    background-color: #1990ce;
+}
+.caja.verde{
+    background-color: #07bc83;
+}
+.contenido_cabecera{
+    width: 100%;
+    height: 160px;
+    display: flex;
+    align-items: center;
+}
+.titulo_cabecera{
+    font: normal normal normal 34px/1.4em lulo-clean-w01-one-bold,sans-serif;
+    font-weight: bold;
+    margin-left: 50px;
+    color: #116089;
+    font-size: 50px;
+}
+.btn_flotante{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 52px;
+    background: #07bc83;
+    width: 350px;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+}
+.menu_cabecera{
+    width: 100%;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+.menu_cabecera ul{
+    list-style: none;
+}
+.menu_cabecera ul li{
+    display: inline-block;
+
+}
+.menu_cabecera ul li a{
+    color: #333333;
+    text-decoration: none;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px 40px;
+    text-align: center;
+}
+
+/* ----------------------Slider-------------------------- */
+
+.slider{
+    width: 100%;
+    height: 800px;
+    background-color: transparent;
+    background: url('../img/slider.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 80px;
+    border-bottom: 1px solid #ccc;
+
+}
+.slider .bloques_contenido{
+    display: flex;
+    align-items: flex-start;
+    width: 75%;
+    overflow: hidden;
+}
+.bloques_contenido .caja{
+    width: 33.3%;
+    height: 300px;
+    border-bottom: 10px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.bloques_contenido .caja a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 32px;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+.bloques_contenido .caja a span{
+    font-weight: bold;
+}
+
+.bloques_contenido .caja.turqueza{
+    border-bottom: 10px solid rgb(2, 184, 191);
+    background: rgba(2, 184, 191,.7);
+}
+.bloques_contenido .caja.azul{
+    border-bottom: 10px solid rgb(25, 144, 206);
+    background: rgba(25, 144, 206,.7);
+    height: 280px;
+}
+.bloques_contenido .caja.verde{
+    border-bottom: 10px solid rgb(7, 188, 131);
+    background: rgba(7, 188, 131,.7);
+}
+
+/* ----------------------Nosotros-------------------------- */
+
+.nosotros{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 300px;
+}
+.nosotros > h2,
+.nuestros_medicos > h2,
+.clientes_satisfechos > h2,
+.contacto > h2,
+.citas_medicas > h2{
+    text-align: center;
+    font: normal normal normal 70px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;
+    color: #02B8BF;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.nosotros .cuadrito,
+.servicios .cuadrito,
+.nuestros_medicos .cuadrito,
+.clientes_satisfechos .cuadrito,
+.contacto .cuadrito,
+.citas_medicas .cuadrito{    
+    background-color: #02B8BF;
+    display: block;
+    height: 15px;
+    width: 15px;
+    margin: auto;
+    margin-bottom: 70px;
+    margin-top: 20px;
+}
+.contenido_nosotros{
+    display: flex;
+}
+.contenido_nosotros > div{
+    width: 50%;
+    padding: 0px 25px;
+    padding-top: 20px;
+    font: normal normal normal 15px/1.4em 'open sans',sans-serif;
+    color: #666666;
+}
+.contenido_nosotros .right{
+    border-left: 1px solid #ccc;
+}
+.contenido_nosotros .right a{
+    display: block;
+    color: #666666;
+}
+.contenido_nosotros .left h3{
+    font-size: 30px;
+    line-height: 40px;
+}
+.contenido_nosotros .left ul{
+    padding-left: 20px;
+}
+
+/* ----------------------Servicios-------------------------- */
+
+.servicios{
+    width: 100%;
+    height: 850px;
+    background: url('../img/servicios.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 100px;
+}
+.servicios > h2{
+    text-align: center;
+    font: normal normal normal 70px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.servicios .cuadrito{
+    background-color: #ffffff;
+}
+.container_grid_servicios{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+.container_grid_servicios .grid{
+    background-color: rgba(255, 255, 255,.13);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container_grid_servicios .grid a{
+    color: #ffffff;
+    text-decoration: none;
+    font: normal normal normal 24px/1.4em 'open sans',sans-serif;
+    
+}
+
+/* ----------------------Contador-------------------------- */
+
+.contador{
+    width: 100%;
+    height: 180px;
+    background-color: #07bc83;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.contador > div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 50px;
+}
+.contador > div > h4{
+    font: normal normal normal 60px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+.contador > div > span{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ----------------------Nuestros medicos-------------------------- */
+
+.nuestros_medicos{
+    width: 100%;
+    margin-bottom: 70px;
+}
+.container_doctores{
+    width: 74%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.container_doctores > div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 33.3%;
+    margin-top: 30px;
+}
+.container_doctores > div img{
+    width: 200px;
+    margin-bottom: 30px;
+}
+.container_doctores > div img.turqueza{
+    border-bottom: 10px solid #02b8bf;
+}
+.container_doctores > div img.azul{
+    border-bottom: 10px solid #1990ce;
+}
+.container_doctores > div img.verde{
+    border-bottom: 10px solid #07bc83;
+}
+
+.container_doctores > div h2{
+    font: normal normal normal 24px/1.4em 'open sans',sans-serif;
+    color: #333333;
+    text-align: center;
+}
+.container_doctores > div p{
+    text-align: center;
+    font: normal normal normal 15px/1.4em 'open sans',sans-serif;
+    color: #666666;
+}
+
+/* ----------------------Paralax-------------------------- */
+
+.paralax{
+    width: 100%;
+    height: 580px;
+    background: url('../img/paralax.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+/* ----------------------Clientes Satisfechos-------------------------- */
+
+.clientes_satisfechos{
+    background: #116089;
+    color: #ffffff;
+    padding: 70px;
+    margin-bottom: 70px;
+}
+.clientes_satisfechos > h2{
+    color: #ffffff;
+}
+.clientes_satisfechos .cuadrito{
+    background-color: #ffffff;
+}
+.container_testimonios{
+    display: flex;
+    width: 75%;
+    margin: auto;
+}
+.container_testimonios > div{
+    text-align: center;
+    margin: 0px 20px;
+}
+.container_testimonios > div i{
+    font-size: 30px;
+    margin: 70px 0px;
+    color: #6dd2b2;
+}
+.container_testimonios > div p{
+    font: normal normal normal 13px/1.4em 'open sans',sans-serif;
+    font-style: italic;
+    margin-bottom: 70px;
+}
+
+/* ----------------------Contacto-------------------------- */
+
+.contacto{
+    width: 100%;
+}
+.contacto > img{
+    margin: auto;
+    display: block;
+    margin-bottom: 40px;
+    max-width: 100%;
+}
+.contacto .container_info{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.contacto .container_info > div{
+    width: 50%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.contacto .container_info > .right{
+    border-left: 1px solid #cccccc;
+}
+.contacto .container_info > div h3{
+    font: normal normal normal 24px/1.4em 'open sans',sans-serif;
+    color: #333333;
+    margin-bottom: 20px;
+}
+.contacto .container_info > div p{
+    font: normal normal normal 15px/1.4em 'open sans',sans-serif;
+    color: #666666;
+    line-height: 25px;
+}
+
+/* ----------------------Footer-------------------------- */
+
+footer{
+    width: 100%;
+    background-color: #f2f2f2;
+    padding-top: 80px;
+    text-align: center;
+
+}
+footer .container_info{
+    display: flex;
+    width: 65%;
+    margin: auto;
+}
+footer .container_info .right form input{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+footer .container_info .right form button{
+    padding: 8px 30px;
+    border: none;
+    background-color: #02b8bf;
+    color: #ffffff;
+    float: right;
+
+}
+footer .container_info .left {
+    color: #666666;
+}
+footer .container_info .left i{
+    font-size: 20px;
+    margin: 20px 6px;
+}
+footer .container_info > div{
+    width: 50%;
+    text-align: center;
+    padding: 0px 30px;
+    margin-bottom: 20px;
+}
+footer .up{
+    color: #1990ce;
+    font-size: 30px;
+    cursor: pointer;
+}
+.mini_paralax{
+    background: url('../img/paralax.jpg');
+    background-size: cover;
+    background-position: 0px 600px;
+    width: 100%;
+    height: 6px;
+}
+
+
+/* ----------------------Citas medicas-------------------------- */
+
+.citas_medicas{
+    width: 100%;
+}
+.citas_medicas > h2{
+    margin-top: 100px;
+    text-transform: initial;
+}
+.container_precios{
+    display: flex;
+    width: 70%;
+    margin: auto;
+}
+.container_precios > div{
+    width: 33.3%;
+    text-align: center;
+    background-color: #f2f2f2;
+    margin: 15px;
+    padding: 35px 0px;
+}
+
+.container_precios > div h3{
+    color: rgb(102, 102, 102);
+    font: normal normal normal 24px/1.4em avenir-lt-w01_85-heavy1475544;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.container_precios > div h3:hover{
+    color: rgb(151, 151, 151);
+}
+.container_precios > div p{
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 30px;
+}
+.container_precios > div button{
+    padding: 10px 30px;
+    font-size: 16px;
+    border: none;
+    background-color: #02b8bf;
+    color: #ffffff;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all .2s ease;
+
+}
+.container_precios > div button:hover{
+    background-color: #1ac1c7;
+}
